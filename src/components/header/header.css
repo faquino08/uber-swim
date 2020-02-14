@@ -1,0 +1,106 @@
+.navblue {
+  background-color: #2e3131 !important;
+}
+
+.nav-item {
+  margin-bottom: 0 !important;
+}
+
+.navbar-upper > li {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.navbar-lower {
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+    font-family: sans-serif !important;
+}
+
+.navbar-brand img {
+    max-width: 10%;
+    margin-right: 0.5rem;
+    margin-bottom: 0rem;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    padding-bottom: 0px;
+  }
+
+  .navbar-collapse {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  .navbar .navbar-split {
+    position: relative;
+    padding-left: 50px;
+    float: right;
+    margin-right: -20px;
+  }
+  /*.navbar .navbar-split:before {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    content: "";
+    border-bottom: 38px solid #19b5fe;
+    border-left: 38px solid transparent;
+    border-right: 12px solid #19b5fe;
+  }
+  .navbar .navbar-split:after {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    content: "";
+    border-bottom: 38px solid #19b5fe;
+    border-left: 38px solid transparent;
+    border-right: 12px solid #19b5fe;
+  }*/
+  .navbar .navbar-split .navbar-upper {
+    padding-left: 0;
+    float: right;
+  }
+  .navbar .navbar-split .navbar-lower {
+    background-color: #19b5fe;
+    width: 100%;
+    clear: both;
+    height: 38px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-collapse {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    border: none;
+    box-shadow: none;
+  }
+  .navbar .navbar-upper {
+    display: table;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+  }
+  .navbar .navbar-upper > li {
+    display: table-cell;
+    font-size: 32px;
+  }
+  .navbar .navbar-lower {
+    padding: 0 0 15px;
+    margin: 0;
+    text-align: center;
+  }
+  .navbar .navbar-lower > li > a {
+    font-size: 24px;
+    padding: 15px 0;
+  }
+}
