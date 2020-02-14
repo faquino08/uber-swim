@@ -6,7 +6,7 @@ import "./header.css"
 import logo from "../../images/Logo v0.2.svg"
 
 const Header = ({ siteTitle }) => (
-  <nav className="navbar navbar-expand-lg navbar-dark navblue">
+  <nav className="navbar navbar-expand-md navbar-dark navblue">
     <Link className="navbar-brand" to="/">
       <img src={logo} alt="Logo" />
       {siteTitle}
@@ -24,32 +24,40 @@ const Header = ({ siteTitle }) => (
     </button>
 
     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <div className="navbar-split">
-        <ul className="navbar-nav navbar-upper mr-auto mt-2 mt-lg-0">
-          <li>
-            <a href="#">
-              <i class="fa fa-facebook" style={{ color: "white" }}></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-twitter" style={{ color: "white" }}></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-instagram" style={{ color: "white" }}></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-youtube" style={{ color: "white" }}></i>
-            </a>
-          </li>
-        </ul>
+      <div className="navbar-split col-md-auto ml-auto">
+        <div className="col-md-auto ml-auto navbar-social">
+          <ul className="navbar-nav navbar-upper mt-3 mt-md-0 ">
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f" style={{ color: "white" }}></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter" style={{ color: "white" }}></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-instagram" style={{ color: "white" }}></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-youtube" style={{ color: "white" }}></i>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-        <div className="navbar-lower">
-          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+        <div className="navbar-lower col-md-auto ml-auto">
+          <ul className="navbar-nav mt-2 mt-md-3">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
+                <span className="sr-only">(current)</span>
+              </Link>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/">
                 About
@@ -79,7 +87,7 @@ const Header = ({ siteTitle }) => (
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/">
-                Contact Us
+                Contact
               </Link>
             </li>
             <li className="nav-item">
