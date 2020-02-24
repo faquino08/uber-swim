@@ -6,13 +6,20 @@
   margin-bottom: 0 !important;
 }
 
+.justify-content-end {
+  width: 100%;
+}
+
 .navbar-upper {
   flex-direction: row;
   margin-top: 0.25em;
   display: flex;
-  justify-content: space-evenly;
   box-sizing: inherit;
   height: 21px !important;
+}
+
+.svg-inline--fa {
+  margin: 0 0.5rem;
 }
 
 .navbar-lower {
@@ -23,21 +30,28 @@
 
 .nav-link {
   color: white !important;
+  padding-bottom: 0;
 }
 
 .navbar-brand {
     font-family: sans-serif !important;
+    padding-bottom: 0 !important;
+    margin-right: 0 !important;
 }
 
 .navbar-brand img {
-    max-width: 10%;
-    margin-right: 0.5rem;
+    height: 50px;
+    margin-right: 0rem;
     margin-bottom: 0rem;
 }
 
-@media (min-width: 768){
+.navbar-social ul {
+  margin-left: 0em;
+}
+
+@media screen and (min-width: 768px) {
   .navbar-upper {
-    float: right;
+    justify-content: end;
   }
 
   .navbar-upper > li {
@@ -45,31 +59,52 @@
     padding-left: 0.5rem;
     height: 21px;
   }
+  .navbar-upper {
+    flex-direction: row;
+    margin-top: 0.25em;
+    display: flex;
+    box-sizing: inherit;
+    height: 21px !important;
+  }
 
-  .navbar-nav {
-    height: 100vh !important;
+  .svg-inline--fa {
+    margin: 0 0.5rem;
   }
 }
 
 .navbar-split {
   padding: 0;
 }
-@media (max-width:768p) {
-  .collapse:not(.show) {
-    transform: translate3d(100vw,0,0) !important;
-    visibility: hidden;
+@media screen and (max-width: 767px) {
+  .collapse{
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    z-index: 1000;
   }
-
-  .collapse.show {
-    transform: translate3d(0vw, 0, 0) !important;
-    overflow: hidden;
-    visibility: visible;
+  .collapse:not(.show) {
+    transform: translate3d(100vw, 0, 0);
     display: block;
   }
 
   .collapsing {
-    height: 100% !important;
-    transition: transform 0.5s linear;
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1) !important;
+    transition: height 0s;
+  }
+
+  .collapse.show {
+    transform: translate3d(0vw, 0, 0);
+  }
+
+  .collapsing {
+  }
+
+  .navbar-upper {
+    justify-content: space-evenly !important;
   }
 }
 

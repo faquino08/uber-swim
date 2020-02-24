@@ -3,10 +3,67 @@ import PropTypes from "prop-types"
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./header.css"
-import logo from "../../images/Logo v0.2.svg"
+import {Navbar, Nav} from "react-bootstrap"
+import logo from "../../images/Logo_1-in-vector.svg"
+import "../../images/js/all.js"
 
 const Header = ({ siteTitle }) => (
-  <nav className="navbar navbar-expand-md navbar-dark navblue">
+  <Navbar bg="dark" className="navblue" expand="md">
+    <Navbar.Brand href="/">
+      <img
+        src={logo}
+        className="d-inline-block align-top"
+        alt="React Bootstrap logo"
+      />
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <div className="navbar-split justify-content-end">
+        <div className="navbar-social">
+          <ul className="navbar-nav navbar-upper mt-3 mt-md-0 ">
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f" style={{ color: "white" }}></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter" style={{ color: "white" }}></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-instagram" style={{ color: "white" }}></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-youtube" style={{ color: "white" }}></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <Nav className="justify-content-end" activeKey="/home">
+          <Nav.Item>
+            <Nav.Link href="/">Home</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#link">About</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#link">Classes</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#link">Contact</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="#link">Blog</Nav.Link>
+          </Nav.Item>
+        </Nav>
+      </div>
+    </Navbar.Collapse>
+  </Navbar>
+  /*<nav className="navbar navbar-expand-md navbar-dark navblue">
     <Link className="navbar-brand" to="/">
       <img src={logo} alt="Logo" />
       {siteTitle}
@@ -99,7 +156,7 @@ const Header = ({ siteTitle }) => (
         </div>
       </div>
     </div>
-  </nav>
+  </nav>*/
 )
 
 Header.propTypes = {
