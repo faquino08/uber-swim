@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
         alt="React Bootstrap logo"
       />
     </Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Toggle aria-controls="basic-navbar-nav" children={hamburger}/>
     <Navbar.Collapse id="basic-navbar-nav">
       <div className="navbar-split justify-content-end">
         <div className="navbar-social">
@@ -159,12 +159,17 @@ const Header = ({ siteTitle }) => (
   </nav>*/
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const hamburger = (
+  <div class="section__content">
+    <input type="checkbox" id="burger__input" class="burger__input"></input>
+    <label for="burger__input" class="burger__label  burger__label--cross">
+      <span class="burger__lines">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </span>
+    </label>
+  </div>
+)
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;
