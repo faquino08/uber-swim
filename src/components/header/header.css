@@ -1,5 +1,12 @@
 .navblue {
-  background-color: #2e3131 !important;
+  background-color: white !important;
+  padding: 0.25rem 0 !important;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: transparent;
 }
 
 .nav-item {
@@ -18,8 +25,12 @@
   height: 21px !important;
 }
 
+.svg-inline--fa:hover{
+  border-bottom: 1px solid #cd1e26 !important;
+}
 .svg-inline--fa {
   margin: 0 0.5rem;
+  color: #cd1e26;
 }
 
 .navbar-lower {
@@ -29,8 +40,15 @@
 }
 
 .nav-link {
-  color: white !important;
+  color: #cd1e26 !important;
   padding-bottom: 0;
+  padding-top: 0;
+  margin-top: 0.5em;
+  border-bottom: 1px solid transparent !important;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid #cd1e26 !important;
 }
 
 .navbar-brand {
@@ -53,20 +71,11 @@
 /* 
   Hamburger hide input 
 */
-.burger__input {
-  display: none;
-}
-
-.burger__label {
-  display: none; /* if you don't want to show this for the desktop version */
+.hamburger {
   align-items: center;
   /* put Burger on top of navigation*/
   position: relative;
   z-index: 11000;
-
-  padding: calc(var(--gutter) * .5);  
-  background-color: var(--white);
-
   cursor: pointer;
 }
 
@@ -79,42 +88,43 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: ivory;
-  transition: transform var(--bar-transition-time) var(--bar-transition);
 }
 
 .burger__line {
   display: block;
-
-  width: var(--bar-width);
-  height: var(--bar-height);
-
-  margin-top: var(--bar-margin);
-  margin-bottom: var(--bar-margin);
-  border-radius: var(--bar-borderradius);
-
-  background-color: var(--black);
-  
-  transition: all var(--bar-transition-time) var(--bar-transition);
+  margin: .08em 0;
+  width: 1rem;
+  height: 0.15rem;
+  background-color: #cd1e26;
+  transition: all 0.45s cubic-bezier(.25,.01,.75,1);
+  z-index: 11000;
 }
 
 /*
   Hamburger Cross
 */
 /*line-middle*/
-.burger__input:checked ~ .burger__label--cross .burger__line:nth-child(2) {
+.navbar-toggler:not(.collapsed) > .hamburger > .burger__lines > .burger__line:nth-child(2) {
   opacity: 0;
+  transform: translateX(-1em);
 }
 
 /* top line */
-.burger__input:checked ~ .burger__label--cross .burger__line:nth-child(1) {
-  transform: translateY(var(--bar-offset)) rotate(var(--bar-arrow-angle));
+.navbar-toggler:not(.collapsed) > .hamburger > .burger__lines > .burger__line:nth-child(1) {
+  transform: 
+    translate3d(0, 0, 0)
+    translateY(calc( 0.15em + 0.08em * 2 )) 
+    rotate(45deg);
 }
 
 /* bottom line */
-.burger__input:checked ~ .burger__label--cross .burger__line:nth-child(3) {
-  transform: translateY( calc( var(--bar-offset) * -1 ) ) rotate(calc( var(--bar-arrow-angle) * -1 ));
+.navbar-toggler:not(.collapsed) > .hamburger > .burger__lines > .burger__line:nth-child(3) {
+  transform: 
+    translate3d(0, 0, 0)
+    translateY(calc( 0.15em + 0.08em * -5 )) 
+    rotate(calc( 45deg * -1 ));
 }
+
 
 @media screen and (min-width: 768px) {
   .navbar-upper {
@@ -141,17 +151,22 @@
 }
 
 @media screen and (max-width: 767px) {
+  .navblue {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.12);
+  }
+
   .collapse{
     text-align: center;
     padding: 0rem 1rem;
-    height: calc(100vh - 50px - 1rem);
-    width: calc(100vw - 1rem + 1px);
+    height: calc(100vh - 50px - 0.5rem);
+    width: 100vw;
     position: fixed;
     top: calc(50px + 0.5rem);
+    bottom: 0;
     left: 0;
     z-index: 1000;
-    background-color: #2e3131 !important;
-    transition: transform 0.3s ease !important;
+    background-color: white !important;
+    transition: transform 0.3s cubic-bezier(.25,.01,.75,1) !important;
   }
 
   .collapse:not(.show) {
@@ -163,13 +178,15 @@
   .show {
     text-align: center;
     transform: translate3d(0vw, 0, 0);
-    height: calc(100vh - 50px - 1rem);
+    height: calc(100vh - 50px - 0.5rem);
   }
 
   .collapsing {
     text-align: center;
-    height: calc(100vh - 50px - 1rem) !important;
-    transition: transform 0.3s ease !important;
+    height: calc(100vh - 50px - 0.5rem) !important;
+    transition: transform 0.3s cubic-bezier(.25,.01,.75,1) !important;
+    padding: 0rem 1rem !important;
+    width: 100vw !important;
   }
 
   .navbar-upper {
@@ -183,11 +200,11 @@
   /* 
     Hamburger
   */
-  .burger__label {
+  .menu {
     display: flex;
   }
   
-  .burger__label > * {
+  .menu > * {
     padding-left: .5rem;
     padding-right: .5rem;
   }

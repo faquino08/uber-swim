@@ -8,7 +8,7 @@ import logo from "../../images/Logo_1-in-vector.svg"
 import "../../images/js/all.js"
 
 const Header = ({ siteTitle }) => (
-  <Navbar bg="dark" className="navblue" expand="md">
+  <Navbar className="navblue" expand="md">
     <Navbar.Brand href="/">
       <img
         src={logo}
@@ -16,29 +16,28 @@ const Header = ({ siteTitle }) => (
         alt="React Bootstrap logo"
       />
     </Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" children={hamburger}/>
     <Navbar.Collapse id="basic-navbar-nav">
       <div className="navbar-split justify-content-end">
-        <div className="navbar-social">
-          <ul className="navbar-nav navbar-upper mt-3 mt-md-0 ">
+        <div className="navbar-social justify-content-end">
+          <ul className="navbar-nav navbar-upper mt-3 mt-md-0 justify-content-end">
             <li>
               <a href="#">
-                <i class="fab fa-facebook-f" style={{ color: "white" }}></i>
+                <i class="fab fa-facebook-f"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fab fa-twitter" style={{ color: "white" }}></i>
+                <i class="fab fa-twitter"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fab fa-instagram" style={{ color: "white" }}></i>
+                <i class="fab fa-instagram"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fab fa-youtube" style={{ color: "white" }}></i>
+                <i class="fab fa-youtube"></i>
               </a>
             </li>
           </ul>
@@ -62,6 +61,11 @@ const Header = ({ siteTitle }) => (
         </Nav>
       </div>
     </Navbar.Collapse>
+    <Navbar.Toggle
+      aria-controls="basic-navbar-nav"
+      as="checkbox"
+      children={hamburger}
+    />
   </Navbar>
   /*<nav className="navbar navbar-expand-md navbar-dark navblue">
     <Link className="navbar-brand" to="/">
@@ -160,15 +164,12 @@ const Header = ({ siteTitle }) => (
 )
 
 const hamburger = (
-  <div class="section__content">
-    <input type="checkbox" id="burger__input" class="burger__input"></input>
-    <label for="burger__input" class="burger__label  burger__label--cross">
-      <span class="burger__lines">
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </span>
-    </label>
+  <div for="burger__input" class="hamburger">
+    <span class="burger__lines">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </span>
   </div>
 )
 
