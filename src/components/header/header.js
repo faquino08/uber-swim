@@ -16,6 +16,11 @@ const Header = ({ siteTitle }) => (
         alt="React Bootstrap logo"
       />
     </Navbar.Brand>
+    <Navbar.Toggle
+      aria-controls="basic-navbar-nav"
+      as="button"
+      children={hamburger}
+    />
     <Navbar.Collapse id="basic-navbar-nav">
       <div className="navbar-split justify-content-end">
         <div className="navbar-social justify-content-end">
@@ -61,11 +66,6 @@ const Header = ({ siteTitle }) => (
         </Nav>
       </div>
     </Navbar.Collapse>
-    <Navbar.Toggle
-      aria-controls="basic-navbar-nav"
-      as="checkbox"
-      children={hamburger}
-    />
   </Navbar>
   /*<nav className="navbar navbar-expand-md navbar-dark navblue">
     <Link className="navbar-brand" to="/">
