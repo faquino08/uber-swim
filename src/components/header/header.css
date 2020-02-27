@@ -59,9 +59,10 @@
 }
 
 .navbar-brand img {
-    height: 50px;
+    height: 40px;
     margin-right: 0rem;
     margin-bottom: 0rem;
+    padding: 5px 10px;
 }
 
 .navbar-social ul {
@@ -158,10 +159,10 @@
   .collapse{
     text-align: center;
     padding: 0rem 1rem;
-    height: calc(100vh - 50px - 0.5rem);
+    height: calc(100vh - 40px - 0.5rem);
     width: 100vw;
     position: fixed;
-    top: calc(50px + 0.5rem);
+    top: calc(40px + 0.5rem);
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -178,12 +179,12 @@
   .show {
     text-align: center;
     transform: translate3d(0vw, 0, 0);
-    height: calc(100vh - 50px - 0.5rem);
+    height: calc(100vh - 40px - 0.5rem);
   }
 
   .collapsing {
     text-align: center;
-    height: calc(100vh - 50px - 0.5rem) !important;
+    height: calc(100vh - 40px - 0.5rem) !important;
     transition: transform 0.3s cubic-bezier(.25,.01,.75,1) !important;
     padding: 0rem 1rem !important;
     width: 100vw !important;
