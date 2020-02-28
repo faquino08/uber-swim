@@ -1,0 +1,40 @@
+.bullets {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ecf0f1;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+}
+
+.bullet_pt {
+    text-align: center;
+}
+
+.col {
+    width: 100%;
+}
+
+.bullet_pt .svg-inline--fa {
+    color: black !important;
+    size: 3 !important;
+}
+
+.col {
+    background-color: #ecf0f1;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.bl_divider {
+    display: block;
+    border: none;
+    color: #ecf0f1;
+    width: 2px !important;
+    background-color: #ecf0f1;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 5%,rgba(255, 255, 255, 0.5) 25%,rgba(255, 255, 255, 0.5) 75%,rgba(255, 255, 255, 0) 95%);
+}
