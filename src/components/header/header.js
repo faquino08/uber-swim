@@ -9,63 +9,65 @@ import "../../images/js/all.js"
 
 const Header = ({ siteTitle }) => (
   <Navbar className="navblue" expand="md">
-    <Navbar.Brand href="/">
-      <img
-        src={logo}
-        className="d-inline-block align-top"
-        alt="React Bootstrap logo"
+    <div style={{ maxWidth: "1200px", margin: `0 auto`, width:"100%",height:"auto", display:"flex",}}>
+      <Navbar.Brand href="/">
+        <img
+          src={logo}
+          className="d-inline-block align-top"
+          alt="React Bootstrap logo"
+        />
+      </Navbar.Brand>
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        as="button"
+        children={hamburger}
       />
-    </Navbar.Brand>
-    <Navbar.Toggle
-      aria-controls="basic-navbar-nav"
-      as="button"
-      children={hamburger}
-    />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <div className="navbar-split justify-content-end">
-        <div className="navbar-social justify-content-end">
-          <ul className="navbar-nav navbar-upper mt-3 mt-md-0 justify-content-end">
-            <li>
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </li>
-          </ul>
+      <Navbar.Collapse id="basic-navbar-nav">
+        <div className="navbar-split justify-content-end">
+          <div className="navbar-social justify-content-end">
+            <ul className="navbar-nav navbar-upper mt-3 mt-md-0 justify-content-end">
+              <li>
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <Nav className="justify-content-end" activeKey="/home">
+            <Nav.Item>
+              <Nav.Link href="/">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#link">About</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#link">Classes</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#link">Contact</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#link">Blog</Nav.Link>
+            </Nav.Item>
+          </Nav>
         </div>
-        <Nav className="justify-content-end" activeKey="/home">
-          <Nav.Item>
-            <Nav.Link href="/">Home</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#link">About</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#link">Classes</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#link">Contact</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#link">Blog</Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </div>
-    </Navbar.Collapse>
+      </Navbar.Collapse>
+    </div>
   </Navbar>
   /*<nav className="navbar navbar-expand-md navbar-dark navblue">
     <Link className="navbar-brand" to="/">

@@ -1,0 +1,17 @@
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption h3 {
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+    .carousel-caption {
+        padding: 0px 0px 10px 0px !important;
+        width: 100%;
+        left: 0 !important;
+        right: 0 !important;
+    }
+}
