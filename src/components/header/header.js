@@ -1,15 +1,23 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./header.css"
 import {Navbar, Nav} from "react-bootstrap"
+import Button from "react-bootstrap/Button"
 import logo from "../../images/Logo_1-in-vector.svg"
 import "../../images/js/all.js"
 
 const Header = ({ siteTitle }) => (
   <Navbar className="navblue" expand="md">
-    <div style={{ maxWidth: "1200px", margin: `0 auto`, width:"100%",height:"auto", display:"flex",}}>
+    <div
+      style={{
+        maxWidth: "1200px",
+        margin: `0 auto`,
+        width: "100%",
+        height: "auto",
+        display: "flex",
+      }}
+    >
       <Navbar.Brand href="/">
         <img
           src={logo}
@@ -59,11 +67,13 @@ const Header = ({ siteTitle }) => (
               <Nav.Link href="#link">Classes</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#link">Contact</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
               <Nav.Link href="#link">Blog</Nav.Link>
             </Nav.Item>
+            <Button variant="outline-primary">
+              <Nav.Item>
+                <Nav.Link href="#link">Contact</Nav.Link>
+              </Nav.Item>
+            </Button>
           </Nav>
         </div>
       </Navbar.Collapse>

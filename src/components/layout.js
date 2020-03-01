@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 1200,
+          maxWidth: 2000,
           padding: `0`,
           paddingTop: 0,
           position: "relative",
@@ -37,9 +37,8 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <div className="footing">
+            © {new Date().getFullYear()}, Miss Lucy's Swim Academy &trade;        </div>
         </footer>
       </div>
     </>
