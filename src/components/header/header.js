@@ -8,7 +8,9 @@ import logo from "../../images/Logo_1-in-vector.svg"
 import "../../images/js/all.js"
 
 const Header = ({ siteTitle }) => (
-  <Navbar className="navblue" expand="md">
+  <Navbar className="navblue" expand="md" collapseOnSelect="true"
+    sticky="top"
+  >
     <div
       style={{
         maxWidth: "1200px",

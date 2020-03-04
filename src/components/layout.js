@@ -38,7 +38,8 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer>
           <div className="footing">
-            © {new Date().getFullYear()}, Miss Lucy's Swim Academy &trade;        </div>
+            © {new Date().getFullYear()}, Miss Lucy's Swim Academy 
+          </div>
         </footer>
       </div>
     </>

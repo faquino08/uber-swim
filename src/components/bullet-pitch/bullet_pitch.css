@@ -61,4 +61,11 @@
     color: white;
     margin-bottom: 0;
     margin-top: 30px;
+    font-family: sans-serif;
+    font-size: 3vw;
+}
+
+.bullets .row p {
+    font-family: sans-serif;
+    font-size: 1.5vw;
 }

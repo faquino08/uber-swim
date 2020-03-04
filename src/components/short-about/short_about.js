@@ -19,8 +19,7 @@ const quickAboutUs = () => (
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
           facilisis magna etiam tempor orci eu lobortis elementum. Viverra
-          mauris in aliquam sem fringilla. Cum sociis natoque penatibus et
-          magnis dis.
+          mauris in aliquam sem fringilla.
         </p>
         <div className="short_btn">
           <Button variant="outline-primary" >

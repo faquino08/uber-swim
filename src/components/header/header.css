@@ -21,7 +21,7 @@
 }
 
 .navbar-split {
-  padding-right: calc((100% - 1200px)*0.5);
+  padding-right: 10px;
 }
 
 .navbar-upper {
@@ -252,6 +252,10 @@
     right: 10px;
     top: 18px;
     position: absolute;
+  }
+
+  .navbar-nav .btn {
+    margin: 1.5rem 6rem;
   }
 
   /* 

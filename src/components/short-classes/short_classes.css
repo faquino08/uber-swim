@@ -17,7 +17,7 @@
     margin: 1.45rem;
     color: white;
     font-family: sans-serif;
-    font-size: 28px;
+    font-size: 2.5vw;
     position: relative;
 }
 
@@ -29,4 +29,13 @@
     width: 100%;
     padding: 0 auto;
     margin-left: 33%;
+}
+
+.home_classes.container .col-md-4.col-12 .short_btn .btn{
+    min-width: 6rem;
+}
+
+.home_classes.container .row .col-md-4.col-12 img {
+    width: 100%;
+    margin-bottom: 2.25rem;
 }

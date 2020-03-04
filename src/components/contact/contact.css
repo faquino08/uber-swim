@@ -17,7 +17,7 @@
 
 .btn-outline-primary {
   font-weight: bold;
-  color: black;
+  color: var(--primary);
   text-decoration: none; 
 }
 
@@ -30,3 +30,20 @@
     margin-left: 33%;
 }
 
+.home_contact.container Form .form-label{
+    color: #22313f;
+    font-weight: 500;
+}
+
+.home_contact.container form .row {
+    margin: 0 2rem !important;
+    width: 95%;
+}
+
+.home_contact.container form .row h1 {
+    color: #22313f;
+    margin-bottom: 0;
+    font-family: sans-serif;
+    font-size: 3vw;
+    margin-bottom: 2rem;
+}

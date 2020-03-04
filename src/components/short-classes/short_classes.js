@@ -18,8 +18,7 @@ const quickClasses = () => (
       <Col md={4} xs={12}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
-          facilisis magna etiam tempor orci eu lobortis elementum. 
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="short_btn">
           <Button variant="outline-primary">

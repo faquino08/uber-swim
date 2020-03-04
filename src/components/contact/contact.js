@@ -11,6 +11,11 @@ const homeContact = () => (
   <Container className="home_contact">
     <Form>
       <Row>
+        <h1>
+          CONTACT <font color="#cd1e26">US:</font>
+        </h1>
+      </Row>
+      <Row>
         <Col md={6} xs={12}>
           <Form.Label>First Name</Form.Label>
           <Form.Control placeholder="First name" />
