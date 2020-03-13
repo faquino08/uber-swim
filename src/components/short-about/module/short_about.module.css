@@ -1,14 +1,15 @@
-.home_about.container {
+.home_about {
     background-color: #22313f !important;
     padding: 0;
     max-width: 2000px;
+    width: 100%;
 }
 
-.row .col-md-6.col-12 {
+.row :local .col-md-6.col-12 :local {
     padding: 0;
 }
 
-.home_about.container .col-md-6.col-12 p {
+.home_about  :global(.col-md-6.col-12) p {
     margin: 1.45rem;
     color: white;
     font-family: sans-serif;
@@ -16,7 +17,7 @@
     position: relative;
 }
 
-.home_about.container .col-md-6.col-12 .short_btn {
+.home_about :global(.col-md-6.col-12) .short_btn {
     position: relative;
     display: block;
     width: 100%;
@@ -24,40 +25,38 @@
     margin-left: 33%;
 }
 
-.home_about.container .row .col-md-6.col-12 img {
+.home_about :global(.row) :global(.col-md-6.col-12) img {
     margin-bottom: 2.25rem !important;
     width: 100%;
 }
 
-.short_btn button {
+.short_btn :local button {
     width: 33%;
 }
 
-.btn-outline-primary {
+.home_about :global(.btn-outline-primary) {
     border-color: var(--primary);
     font-family: sans-serif;
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:active {
+.home_about :global(.btn-outline-primary:hover), :global(.btn-outline-primary:active) {
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
 }
 
-.btn-outline-primary a {
+.home_about :global(.btn-outline-primary) a {
   font-weight: bold;
   color: white;
   text-decoration: none; 
 }
 
-
-
 @media screen and (max-width: 767px) {
-    .home_about.container .col-md-6.col-12 p {
+    .home_about :global(.col-md-6.col-12) p {
         position: relative;
         top: 0;
     }
 
-    .home_about.container .col-md-6.col-12 .short_btn {
+    .home_about :global(.col-md-6.col-12) .short_btn {
         position: relative;
         margin-top: 0;
         margin-bottom: 1rem;

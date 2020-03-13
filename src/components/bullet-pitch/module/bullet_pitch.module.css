@@ -1,0 +1,58 @@
+.bullets {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 2000px;
+    background-color: #22313f;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+}
+
+.bullet_pt {
+    margin-top: 1.45rem;
+    color: white;
+}
+
+.bullet_pt .svg-inline--fa:hover {
+    border: none !important;
+}
+
+.col {
+    width: 100%;
+}
+
+.bullet_pt .svg-inline--fa {
+    color: white !important;
+    size: 3 !important;
+}
+
+.col {
+    background-color: #22313f;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.bt_1, .bt_2, .bt_3 {
+    margin: 0;
+}
+
+.bullets .row {
+    text-align: center;
+}
+
+.bullets .row h1 {
+    padding: 0 15px;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 30px;
+    font-family: sans-serif;
+    font-size: 3vw;
+}
+
+.bullets .row p {
+    font-family: sans-serif;
+    font-size: 1.5vw;
+}

@@ -1,0 +1,46 @@
+.caption1, .caption2, .caption3 {
+    background-color: rgba(0, 0, 0, 0.15);
+    bottom: 0 !important;
+}
+
+.caption1, .caption2, .caption3 h3 {
+    margin-bottom: 0;
+}
+
+
+:global .carousel-indicators {
+    margin-bottom: 0;
+}
+
+:global(.carousel-item):local(.hero1) {
+    height: 85vh;
+    background-image: url("../../../images/teachingswiming (38).jpg");
+    background-size: cover;
+    background-position: center left 50%;
+    background-repeat: no-repeat;
+}
+
+:global(.carousel-item):local(.hero2) {
+    height: 85vh;
+    background-image: url("../../../images/teachingswiming (5).jpg");
+    background-size: cover;
+    background-position: center left 50%;
+    background-repeat: no-repeat;
+}
+
+:global(.carousel-item):local(.hero3) {
+    height: 85vh;
+    background-image: url("../../../images/teachingswiming (71).jpg");
+    background-size: cover;
+    background-position: center left 40%;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+    :global .carousel-caption {
+        padding: 0px 0px 10px 0px !important;
+        width: 100%;
+        left: 0 !important;
+        right: 0 !important;
+    }
+}

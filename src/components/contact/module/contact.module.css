@@ -5,23 +5,27 @@
     padding: 1rem 0;
 }
 
-.btn-outline-primary {
+.row {
+    margin: 0;
+}
+
+.btn {
     border-color: var(--primary);
     font-family: sans-serif;
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:active {
+.btn:hover, .btn:active {
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
 }
 
-.btn-outline-primary {
+.btn {
   font-weight: bold;
   color: var(--primary);
   text-decoration: none; 
 }
 
-.home_contact.container Form Button {
+.home_contact.container form button {
     margin: 1rem 0;
     position: relative;
     display: block;
@@ -30,20 +34,20 @@
     margin-left: 33%;
 }
 
-.home_contact.container Form .form-label{
+.home_contact.container form label{
     color: #22313f;
     font-weight: 500;
 }
 
-.home_contact.container Form .row {
+.home_contact.container form .row .col {
     margin: 0 2rem !important;
-    width: 95%;
+    max-width: calc(50% - 4rem) !important;
 }
 
 .home_contact.container form .row h1 {
     color: #22313f;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     font-family: sans-serif;
     font-size: 3vw;
-    margin-bottom: 2rem;
+    margin-left: 2rem;
 }
